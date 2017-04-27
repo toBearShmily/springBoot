@@ -12,6 +12,7 @@ public class Reflect {
         //得到需要复制对象的class类型
         Class<?> classType = obj.getClass();
         //通过构造当前对象的空构造来得到一个对象
+
         Object copyObject = classType.getConstructor(new Class[]{})//new Class[] 构造参数(类型)
                 .newInstance(new Object[]{});//为参数赋值
 

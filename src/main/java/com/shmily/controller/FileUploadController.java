@@ -21,6 +21,7 @@ public class FileUploadController {
 
     @RequestMapping("/file")
     public String toFile(){
+        System.out.println("跳转...");
         return "file";
     }
 

@@ -37,7 +37,7 @@ public class UserController {
      * @param pageSize 每页显示条数
      * @return
      */
-    @RequestMapping("/pageHelperUser/{pageNum}/{pageSize}")
+    @RequestMapping(value = "/pageHelperUser/{pageNum}/{pageSize}",consumes = "application/json")
     public List<User> pageHelperUser(@PathVariable("pageNum") int pageNum,@PathVariable("pageSize") int pageSize){
         PageHelper.startPage(pageNum,pageSize);
         System.out.println("aaa");
