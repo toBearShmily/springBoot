@@ -3,6 +3,7 @@ package com.shmily.dao;
 import com.shmily.model.User;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.data.jpa.repository.Query;
 
 import javax.annotation.Resource;
 import java.util.List;

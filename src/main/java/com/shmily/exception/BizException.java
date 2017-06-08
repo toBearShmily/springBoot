@@ -14,6 +14,11 @@ public class BizException extends RuntimeException {
         this.code = stateEnum.getRetCode();
     }
 
+    public BizException(String retCode, String retDesc){
+        super(retDesc);
+        this.code = retCode;
+    }
+
     public String getCode() {
         return code;
     }

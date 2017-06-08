@@ -2,6 +2,7 @@ package com.shmily.exception;
 
 import com.shmily.support.common.Response;
 import com.shmily.support.common.ResponseUtil;
+import com.shmily.support.enums.StateEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -22,7 +23,7 @@ public class BizHandle {
             return ResponseUtil.error(biz.getCode(),biz.getMessage());
         }else{
             log.error("【系统异常】{}",e);
-            return ResponseUtil.error("-1","系统异常");
+            return ResponseUtil.error(StateEnum.SYS_ERROR);
         }
     }
 }

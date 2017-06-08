@@ -22,6 +22,12 @@ public class Response<T> {
         this.data = data;
     }
 
+    public Response(String retCode, String retDesc, T data) {
+        this.retCode = retCode;
+        this.retDesc = retDesc;
+        this.data = data;
+    }
+
     public String getRetCode() {
         return retCode;
     }

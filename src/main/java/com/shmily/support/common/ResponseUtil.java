@@ -18,4 +18,8 @@ public class ResponseUtil {
     public static Response error(StateEnum stateEnum){
         return new Response(stateEnum,null);
     }
+
+    public static Response error(String retCode, String retDesc){
+        return new Response(retCode,retDesc,null);
+    }
 }
