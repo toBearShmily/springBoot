@@ -9,31 +9,21 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "role")
-public class Role implements Serializable{
+public class Role extends BaseModel<Role> implements Serializable{
 
-    @Id
-    @GeneratedValue
-    private Integer id;
-
+    /**
+     * 角色名称
+     */
+    @Column(name = "role_name")
     private String roleName;
 
+    /**
+     * 角色描述
+     */
+    @Column(name = "role_describe")
     private String roleDescribe;
 
     public Role() {
-    }
-
-    public Role(Integer id, String roleName, String roleDescribe) {
-        this.id = id;
-        this.roleName = roleName;
-        this.roleDescribe = roleDescribe;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getRoleName() {
@@ -55,7 +45,6 @@ public class Role implements Serializable{
     @Override
     public String toString() {
         return "Role{" +
-                "id=" + id +
                 ", roleName='" + roleName + '\'' +
                 ", roleDescribe='" + roleDescribe + '\'' +
                 '}';

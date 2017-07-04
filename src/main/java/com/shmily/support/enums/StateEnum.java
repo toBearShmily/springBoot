@@ -17,6 +17,10 @@ public enum StateEnum {
     ERROR("500","调用接口失败"),
     CONNECT_ERROR("502","网络连接异常"),
     UNKNOW_ERROR("-1","未知错误"),
+    NO_PERMISSION_ANNOTATION("-2","no @Permission annotation is configured on controller method"),
+    DB_ERROR("430","数据库异常！！"),
+    LOGIN_SUCCESS("200","登陆成功"),
+    LOGIN_FAIL("400","登陆失败"),
     /**
      * 暂时这样，有需求后续添加
      * */
